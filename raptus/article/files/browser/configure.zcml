@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:article="http://namespaces.zope.org/article"
+    i18n_domain="raptus.article">
+
+    <article:component
+        name="attachments"
+        component=".attachments.Component"
+        viewlet=".attachments.Viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody" />
+
+</configure>

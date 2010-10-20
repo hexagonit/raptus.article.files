@@ -1,0 +1,31 @@
+Developer Manual
+================
+
+Note: You find a developer manual for raptus.article at 
+`raptus.article.core <http://pypi.python.org/pypi/raptus.article.core>`_.
+Please have look there if you need more information.
+
+Code overview
+=============
+
+Adapters
+--------
+file: files.py
+
+- Files (Provider for files contained in an article)
+    - interface: IFiles
+    - adapts: IArticle
+    - getFiles - method (Returns a list of files (catalog brains))
+
+Components
+----------
+plone.belowcontentbody:
+
+- raptus.article.attachments
+
+Interfaces
+----------
+file: interfaces.py
+
+- IFiles (Provider for files contained in an article)
+    - getFiles - Function (Returns a list of files (catalog brains))

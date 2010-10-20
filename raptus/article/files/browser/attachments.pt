@@ -1,0 +1,31 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     class="attachments"
+     tal:condition="view/attachments"
+     i18n:domain="raptus.article">
+  <h2 i18n:translate="">
+    Attachments
+  </h2>
+  <ul class="visualNoMarker manageableList">
+    <li tal:repeat="item view/attachments">
+      <metal:manage use-macro="context/raptus_article_macros/macros/manage" />
+      <a href=""
+         tal:attributes="href string:${item/url}/at_download/file;
+                         title item/description">
+        <img src="" alt=""
+             tal:condition="item/icon"
+             tal:attributes="src item/icon" />
+        <span tal:content="item/title">
+          Title
+        </span>
+      </a>
+      <span class="discreet documentDescription"
+            tal:condition="item/description"
+            tal:content="item/description">
+        Description
+      </span>
+    </li>
+  </ul>
+</div>
