@@ -10,8 +10,9 @@ Code overview
 
 Adapters
 --------
-file: files.py
 
+file: files.py
+``````````````
 - Files (Provider for files contained in an article)
     - interface: IFiles
     - adapts: IArticle
@@ -19,13 +20,15 @@ file: files.py
 
 Components
 ----------
-plone.belowcontentbody:
 
+plone.belowcontentbody
+``````````````````````
 - raptus.article.attachments
 
 Interfaces
 ----------
-file: interfaces.py
 
+file: interfaces.py
+```````````````````
 - IFiles (Provider for files contained in an article)
     - getFiles - Function (Returns a list of files (catalog brains))
